@@ -1,0 +1,115 @@
+/* Configuración global para todos los elementos */
+* {
+  box-sizing: border-box; /* Todos los elementos utilizan box-sizing border-box */
+  margin: 0; /* Elimina el margen predeterminado */
+  padding: 0; /* Elimina el relleno predeterminado */
+  font-family: montserrat; /* Define la fuente predeterminada */
+}
+
+/* Estilos para el cuerpo de la página */
+body {
+  background-color: rgb(56, 56, 56); /* Color de fondo del cuerpo */
+}
+
+/* Estilos para el contenedor principal */
+.container {
+  background: black; /* Color de fondo del contenedor */
+  color: white; /* Color de texto */
+  max-width: 900px; /* Ancho máximo del contenedor */
+  margin: 60px auto; /* Margen superior e inferior automático, margen izquierdo y derecho automáticos */
+  height: 2000px; /* Altura del contenedor */
+  padding: 20px; /* Relleno interno */
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3); /* Sombra */
+}
+
+/* Estilos para el encabezado */
+.header {
+  text-align: center; /* Alineación del texto al centro */
+}
+
+h1 {
+  font-size: 28px; /* Tamaño de fuente */
+}
+
+/* Estilos para el subtítulo en el encabezado */
+.header h3 {
+  text-transform: uppercase; /* Transforma el texto a mayúsculas */
+  font-size: 15px; /* Tamaño de fuente */
+  font-weight: 500; /* Grosor de la fuente */
+}
+
+/* Estilos para el área de la imagen */
+.img-area {
+  width: 200px; /* Ancho de la imagen */
+  height: 200px; /* Altura de la imagen */
+  border-radius: 50%; /* Borde redondeado */
+  overflow: hidden; /* Oculta el contenido que se desborda */
+  margin: 25px auto; /* Margen superior e inferior automático, margen izquierdo y derecho automáticos */
+  border: 15px groove rgb(0, 60, 255); /* Borde con estilo de relieve */
+}
+
+/* Estilos para la imagen dentro del área de la imagen */
+.img-area img {
+  width: 100%; /* Ancho de la imagen */
+}
+
+/* Estilos para la disposición principal */
+.main {
+  display: flex; /* Usa el modelo de caja flexible */
+  flex-wrap: wrap; /* Envuelve los elementos en múltiples líneas */
+}
+
+/* Estilos para las secciones izquierda y derecha */
+.left, .right {
+  flex: 1; /* Distribución flexible del espacio disponible */
+  padding: 30px; /* Relleno interno */
+}
+
+/* Estilos para los párrafos en las secciones izquierda y derecha */
+.left p, .right p {
+  line-height: 2; /* Altura de línea */
+}
+
+/* Estilos para los elementos de la lista en las secciones izquierda y derecha */
+.left ul li, .right ul li {
+  line-height: 2; /* Altura de línea */
+}
+
+/* Estilos para los títulos de segundo nivel */
+h2 {
+  background: rgb(0, 60, 255); /* Color de fondo */
+  padding: 15px; /* Relleno interno */
+  color: white; /* Color de texto */
+  margin: 30px 0; /* Margen superior e inferior */
+  font-size: 20px; /* Tamaño de fuente */
+  border-radius: 0 50px 50px 0; /* Borde redondeado */
+}
+
+/* Estilos para pantallas medianas */
+@media only screen and (max-width: 768px) and (max-width: 991px) {
+  .container {
+    width: 95%; /* Ancho del contenedor */
+    height: auto; /* Altura automática */
+  }
+  h2 {
+    font-size: 18px; /* Tamaño de fuente */
+  }
+}
+
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+  .main {
+    flex-direction: column; /* Cambia la dirección de flexión a columna */
+  }
+  .left, .right {
+    flex: none; /* No se flexiona */
+    width: 100%; /* Ancho completo */
+  }
+  .container {
+    width: 95%; /* Ancho del contenedor */
+    height: auto; /* Altura automática */
+  }
+  h2 {
+    font-size: 15px; /* Tamaño de fuente */
+  }
+}
